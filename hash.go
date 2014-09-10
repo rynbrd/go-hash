@@ -10,7 +10,7 @@ import (
 func Bytes(data []byte) string {
 	hash := sha1.New()
 	hash.Write(data)
-	return base64.URLEncoding.EncodeToString(hash.Sum(nil))
+	return base64.StdEncoding.EncodeToString(hash.Sum(nil))
 }
 
 // Return the hash of a file.
